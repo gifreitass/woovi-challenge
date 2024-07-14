@@ -2,6 +2,7 @@ import { Box } from "@mui/material"
 import TimelineItem from "../molecules/TimelineItem"
 import { useStore } from "@/store/value"
 import TimelinePrice from "../atoms/TimelinePrice"
+import React from "react"
 
 const TimelineBox: React.FC<{ pixConfirmation?: boolean }> = (props) => {
     const parcelNumber = useStore((state) => state.price.parcelNumber)
@@ -12,19 +13,19 @@ const TimelineBox: React.FC<{ pixConfirmation?: boolean }> = (props) => {
             <Box className="flex flex-col relative gap-2">
                 {arrayNumber.map((key, index) => {
                     if (index === 0) {
-                        return <>
+                        return <React.Fragment key={key}>
                             <TimelineItem pixConfirmation={props.pixConfirmation} color="#03D69D" text={<span className="font-semibold text-[#4D4D4D]">{key}ª entrada no Pix </span>} />
                             <Box className="w-[2px] h-5 bg-[#E5E5E5] absolute top-[18px] left-[7px]" />
-                        </>
+                        </React.Fragment>
                     }
-                    return <>
+                    return <React.Fragment key={key}>
                         <TimelineItem color="#E5E5E5" text={<span className="font-semibold text-[#4D4D4D]">{key}ª entrada no cartão </span>} />
-                    </>
+                    </React.Fragment>
                 })}
             </Box>
             <Box className="flex flex-col gap-2">
-                {arrayNumber.map((key, index) => {
-                    return <TimelinePrice />
+                {arrayNumber.map((key) => {
+                    return <TimelinePrice key={key} />
                 })}
             </Box>
         </Box>

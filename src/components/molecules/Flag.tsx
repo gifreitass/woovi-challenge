@@ -3,7 +3,7 @@ import SquareFlag from "../atoms/SquareFlag"
 
 const Flag: React.FC<{ text: React.ReactNode }> = (props) => {
     return (
-        <Box className="bg-[#133A6F] mx-5 px-2 py-1 rounded-md mt-1 relative">
+        <Box className="bg-[#133A6F] mx-5 px-2 py-1 rounded-md relative mt-1 mb-3">
             {props.text}
             <SquareFlag />
         </Box>

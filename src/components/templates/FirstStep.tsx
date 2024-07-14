@@ -1,9 +1,8 @@
 "use client"
 
-import { Box, CircularProgress, FormControl } from "@mui/material"
+import { Box, CircularProgress } from "@mui/material"
 import Header from "../molecules/Header"
-import PromptPayment from "../organisms/PromptPayment"
-import ParceledPayment from "../organisms/ParceledPayment"
+import Payment from "../organisms/Payment"
 import { useEffect, useState } from "react"
 import Footer from "../molecules/Footer"
 import { useRouter } from "next/navigation"
@@ -27,20 +26,18 @@ const FirstStep = () => {
     }, [parcelPrice, router]);
 
     return (
-        <Box display="flex" flexDirection="column" alignItems="center" mt={5}>
+        <Box display="flex" flexDirection="column" alignItems="center" mt={4}>
             {loading ? (
                 <>
                     <CircularProgress className="fixed top-[50%] z-50" />
                     <Header text="João, como você quer pagar?" />
-                    <PromptPayment />
-                    <ParceledPayment />
+                    <Payment />
                     <Footer />
                 </>      
             ) : (
                 <>
                     <Header text="João, como você quer pagar?" />
-                    <PromptPayment />
-                    <ParceledPayment />
+                    <Payment />
                     <Footer />
                 </>
             )}

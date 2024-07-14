@@ -31,7 +31,7 @@ const FormConfirmation = () => {
                     onChange={handleChange}
                 >
                     {arrayNumber.map((key, index) => {
-                        return <MenuItem value={index}>{index + 1}x de {parcelPrice}</MenuItem>
+                        return <MenuItem key={key} value={index}>{index + 1}x de {parcelPrice}</MenuItem>
                     })}
                 </Select>
             </FormControl>

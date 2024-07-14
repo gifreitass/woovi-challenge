@@ -1,8 +1,9 @@
+import { ReactNode } from 'react'
 import { create } from 'zustand'
 
 interface IPrice {
     amount: string,
-    total: string,
+    total: ReactNode,
     parcelNumber: number
 }
 

@@ -2,11 +2,11 @@ import { Box } from "@mui/material"
 import Image from "next/image"
 import React from "react"
 
-const Header: React.FC<{ text: React.ReactNode }> = (props) => {
+const Header: React.FC<{ text: React.ReactNode, styleProps?: string }> = (props) => {
     return (
         <Box className="relative flex flex-col items-center gap-3">
             <Image src="/images/Logo.png" alt="woovi logo" width={120} height={34} />
-            <span className="text-center text-xl font-extrabold text-[#4D4D4D]">{props.text}</span>
+            <span className={`text-center text-xl font-extrabold text-[#4D4D4D] ${props.styleProps}`}>{props.text}</span>
         </Box>
     )
 }

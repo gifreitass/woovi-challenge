@@ -17,7 +17,6 @@ const ThirdStep = () => {
         <Box display="flex" flexDirection="column" alignItems="center" mt={4}>
             <Header text={<span>João, pague o restante em {parcelNumber - 1}x no <br />cartão</span>} />
             <FormConfirmation />
-            <Box className="w-[80%] bg-[#133A6F] text-white mt-4 rounded-lg px-3 py-2 text-center">Pagar</Box>
             <PaymentTime />
             <TimelineBox pixConfirmation={true} />
             <PaymentInformations />

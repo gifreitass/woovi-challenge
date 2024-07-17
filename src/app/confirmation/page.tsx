@@ -1,8 +1,8 @@
-import ThirdStep from "@/components/templates/ThirdStep"
+import Confirmation from "@/components/templates/Confirmation"
 
 const ConfirmationPage = () => {
     return (
-        <ThirdStep />
+        <Confirmation />
     )
 }
 
